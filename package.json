@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/immanuelbayu/learn-node/issues"
   },
-  "homepage": "https://github.com/immanuelbayu/learn-node#readme"
+  "homepage": "https://github.com/immanuelbayu/learn-node#readme",
+  "dependencies": {
+    "amqplib": "^0.5.1"
+  }
 }
