@@ -8,8 +8,8 @@ amqpCon
   .then((ch) => {
     ch.assertQueue('', {
       exclusive: true,
-      // expires: 5000,
-      // autodelete: true,
+      expires: 5000,
+      autodelete: true,
     })
     .then((q) => {
       const corr = uuid();
@@ -21,6 +21,11 @@ amqpCon
         replyTo: q.queue,
       });
 
-      console.log('Sent Hello World');
+      console.log(`Sent ${content}`);
+
+      ch.consume(q.queue, (msg) => {
+        const result = msg.content.toString();
+        console.log(`Receive ${result}`);
+      });
     });
   });

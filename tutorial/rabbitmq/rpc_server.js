@@ -11,6 +11,14 @@ amqpCon
     ch.prefetch(1000);
     ch.consume(queue, (msg) => {
       const content = msg.content.toString();
+      const replyWord = 'Hi There';
       console.log(content);
+      ch.ack(msg);
+      ch.sendToQueue(
+        msg.properties.replyTo,
+        Buffer.from(replyWord),
+        { correlationId: msg.properties.correlationId });
+
+      console.log(replyWord);
     });
   });
