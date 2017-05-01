@@ -1,5 +1,4 @@
 const amqp = require('amqplib');
-// const uuid = require('uuid/v4');
 
 const amqpCon = amqp.connect('amqp://localhost');
 
