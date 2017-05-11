@@ -4,7 +4,8 @@
   "description": "Learn Node From Scratch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration:create": "node_modules/sequelize-cli/bin/sequelize migration:create --config databases/mysql/config/config.js --migrations-path databases/mysql/migrations --name $NAME",
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/immanuelbayu/learn-node#readme",
   "dependencies": {
     "amqplib": "^0.5.1",
+    "sequelize": "^3.30.4",
     "uuid": "^3.0.1"
   }
 }
