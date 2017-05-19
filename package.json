@@ -4,7 +4,14 @@
   "description": "Learn Node From Scratch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init:migration": "node_modules/sequelize-cli/bin/sequelize init:migrations --migrations-path tutorial/migrate/mysql/migrations",
+    "init:model": "node_modules/sequelize-cli/bin/sequelize init:models --models-path tutorial/migrate/mysql/models",
+    "init:seeder": "node_modules/sequelize-cli/bin/sequelize init:seeders --seeders-path tutorial/migrate/mysql/seeders",
+    "model:create": "node_modules/sequelize-cli/bin/sequelize model:create --name $NAME --attributes $ATTR --models-path tutorial/migrate/mysql/models --migrations-path tutorial/migrate/mysql/migrations",
+    "migrate": "node_modules/sequelize-cli/bin/sequelize db:migrate --config tutorial/migrate/index.js --migrations-path tutorial/migrate/mysql/migrations",
+    "seed:create": "node_modules/sequelize-cli/bin/sequelize seed:create --name $NAME --config tutorial/migrate/index.js --seeders-path tutorial/migrate/mysql/seeders",
+    "seed": "node_modules/sequelize-cli/bin/sequelize db:seed:all --config tutorial/migrate/index.js --seeders-path tutorial/migrate/mysql/seeders"
   },
   "repository": {
     "type": "git",
@@ -21,6 +28,9 @@
   "homepage": "https://github.com/immanuelbayu/learn-node#readme",
   "dependencies": {
     "amqplib": "^0.5.1",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0",
     "uuid": "^3.0.1"
   }
 }

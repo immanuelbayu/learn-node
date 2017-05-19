@@ -1,0 +1,20 @@
+{
+  "test": {
+    "database": "tutorial_book",
+    "host": "127.0.0.1",
+    "username": "root",
+    "password": ""
+  },
+  "development": {
+    "database": "tutorial_book",
+    "host": "127.0.0.1",
+    "username": "root",
+    "password": ""
+  },
+  "production": {
+    "database": "tutorial_book",
+    "host": "127.0.0.1",
+    "username": "root",
+    "password": ""
+  }
+}

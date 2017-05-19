@@ -1,0 +1,31 @@
+[{
+	"book_name": "Clean Code",
+	"book_author": "James Jordan",
+	"book_year": "2015",
+	"createdAt": "2017-01-14 08:24:44",
+	"updatedAt": "2017-02-14 08:24:44"
+}, {
+	"book_name": "Domain Driven Design",
+	"book_author": "Alpha Omega",
+	"book_year": "2016",
+	"createdAt": "2017-03-14 08:24:44",
+	"updatedAt": "2017-04-14 08:24:44"
+}, {
+	"book_name": "Mastering PHP",
+	"book_author": "Dexter Frederick",
+	"book_year": "2016",
+	"createdAt": "2017-05-14 08:24:44",
+	"updatedAt": "2017-06-14 08:24:44"
+}, {
+	"book_name": "NodeJS for Dummies",
+	"book_author": "William Luther",
+	"book_year": "2013",
+	"createdAt": "2017-07-14 08:24:44",
+	"updatedAt": "2017-08-14 08:24:44"
+}, {
+	"book_name": "Pattern and Principle DDD",
+	"book_author": "El Fransisco",
+	"book_year": "2014",
+	"createdAt": "2017-09-14 08:24:44",
+	"updatedAt": "2017-12-14 08:24:44"
+}]
