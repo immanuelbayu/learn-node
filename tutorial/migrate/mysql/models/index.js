@@ -1,18 +1,19 @@
-'use strict';
+const fs          = require('fs');
+const path        = require('path');
+const Sequelize   = require('sequelize');
+const basename    = path.basename(module.filename);
+const environment = process.env.NODE_ENV || 'development';
+const mysqlConfig = require('../../config/mysql.json');
+const db          = {};
 
-var fs        = require('fs');
-var path      = require('path');
-var Sequelize = require('sequelize');
-var basename  = path.basename(module.filename);
-var env       = process.env.NODE_ENV || 'development';
-var config    = require('../../config/mysql.json')[env];
-var db        = {};
-
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
-} else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+const sequelize = new Sequelize(
+  mysqlConfig[environment].database,
+  mysqlConfig[environment].username,
+  mysqlConfig[environment].password,
+  {
+    logging: mysqlConfig[environment].logging,
+    host: mysqlConfig[environment].host,
+  });
 
 fs
   .readdirSync(__dirname)
